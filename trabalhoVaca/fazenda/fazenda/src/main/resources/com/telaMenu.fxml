@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MenuControle">
+   <children>
+      <MenuBar layoutX="160.0" layoutY="13.0" prefHeight="25.0" prefWidth="320.0" scaleX="2.0" scaleY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Vaca">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#VacaInserir" text="Inserir" />
+                  <MenuItem mnemonicParsing="false" onAction="#VacaExcluir" text="Excluir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Usuario">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#UsuarioLogar" text="Logar" />
+                  <MenuItem mnemonicParsing="false" onAction="#UsuarioCadastrar" text="Cadastrar" />
+                  <Menu disable="true" mnemonicParsing="false" text="Alterar">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Login" />
+                        <MenuItem mnemonicParsing="false" text="Nome" />
+                        <MenuItem mnemonicParsing="false" text="Senha" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#UsuarioExcluir" text="Excluir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Produção">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ProducaoRegistrar" text="Registrar" />
+                  <MenuItem mnemonicParsing="false" text="Produção diaria" />
+                  <MenuItem mnemonicParsing="false" text="Produção mensal" />
+                  <MenuItem mnemonicParsing="false" text="Produção total" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Sair">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+   </children>
+</AnchorPane>
