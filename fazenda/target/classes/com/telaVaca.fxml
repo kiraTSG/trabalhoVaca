@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.VacaControle">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.VacaControle">
    <children>
       <Text layoutX="277.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaca">
          <font>
@@ -28,9 +28,9 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <TextField fx:id="campoBrinco" layoutX="201.0" layoutY="137.0" prefHeight="25.0" prefWidth="200.0" promptText="Brinco" />
-      <TextField fx:id="campoNome" layoutX="201.0" layoutY="187.0" prefHeight="25.0" prefWidth="200.0" promptText="Nome (opcional)" />
-      <TextField fx:id="campoRaca" layoutX="201.0" layoutY="237.0" prefHeight="25.0" prefWidth="200.0" promptText="Raça" />
+      <TextField fx:id="campoBrinco" layoutX="201.0" layoutY="137.0" prefHeight="25.0" prefWidth="223.0" />
+      <TextField fx:id="campoNome" layoutX="201.0" layoutY="187.0" prefHeight="25.0" prefWidth="223.0" />
+      <TextField fx:id="campoRaca" layoutX="201.0" layoutY="237.0" prefHeight="25.0" prefWidth="223.0" />
       <Button layoutX="392.0" layoutY="331.0" mnemonicParsing="false" onAction="#cadastrar" text="Gravar">
          <font>
             <Font size="15.0" />

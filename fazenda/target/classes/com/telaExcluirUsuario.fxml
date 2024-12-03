@@ -6,31 +6,31 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ExcluirLoginControle">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ExcluirUsuarioControle">
    <children>
-      <Text layoutX="259.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Excluir Login">
+      <Text layoutX="293.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <TextField fx:id="campoLogin" layoutX="220.0" layoutY="169.0" prefHeight="25.0" prefWidth="200.0" promptText="Login" />
-      <TextField fx:id="campoSenha" layoutX="220.0" layoutY="239.0" prefHeight="25.0" prefWidth="200.0" promptText="Senha" />
-      <Text layoutX="79.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+      <Text layoutX="77.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Text layoutX="79.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
+      <Text layoutX="77.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Button layoutX="389.0" layoutY="381.0" mnemonicParsing="false" onAction="#excluir" text="Excluir">
+      <TextField fx:id="campoLogin" layoutX="220.0" layoutY="157.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="campoSenha" layoutX="220.0" layoutY="237.0" prefWidth="200.0" />
+      <Button layoutX="189.0" layoutY="414.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="182.0" layoutY="381.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+      <Button layoutX="377.0" layoutY="414.0" mnemonicParsing="false" text="Confirmar">
          <font>
             <Font size="15.0" />
          </font>

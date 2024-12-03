@@ -1,6 +1,7 @@
 
 package com;
 
+import com.App;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -9,7 +10,7 @@ import javafx.scene.control.TextField;
 import modelo.Usuario;
 import util.Dao;
 
-public class CadastroControle {
+public class CadastroControle  {
     @FXML
     private TextField campoLogin;
     @FXML
@@ -24,6 +25,8 @@ public class CadastroControle {
     private void initialize(){
         daoUsuario = new Dao(Usuario.class); 
     }
+    
+    @FXML
     public void cadastrar(){
         if(campoLogin.getText().isEmpty()|| campoNome.getText().isEmpty()|| campoSenha.getText().isEmpty()){
         Alert alerta = new Alert(AlertType.INFORMATION);
@@ -55,11 +58,9 @@ public class CadastroControle {
         }
         
     }
+    
     @FXML
     public void cancelar() throws IOException{
         App.setRoot("telaMenu");
     }
-    
-    
- 
 }

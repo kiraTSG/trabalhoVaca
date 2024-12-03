@@ -1,5 +1,6 @@
 package com;
 
+import com.App;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -16,7 +17,7 @@ public class LoginControle {
     private TextField campoSenha;
     
     Dao<Usuario> daoUsuario;
-    Usuario usuario;
+    
     
     @FXML
     private void initialize(){
@@ -51,8 +52,9 @@ public class LoginControle {
         App.setRoot ("telaMenu");
         }
     }
+    
     @FXML
-    public void criarConta() throws IOException{
+    private void cadastrar() throws IOException{
         App.setRoot("telaCadastroUsuario");
     }
     
