@@ -27,34 +27,34 @@ public class CadastroControle  {
     }
     
     @FXML
-    public void cadastrar(){
+    public void cadastrar() throws IOException{
         if(campoLogin.getText().isEmpty()|| campoNome.getText().isEmpty()|| campoSenha.getText().isEmpty()){
-        Alert alerta = new Alert(AlertType.INFORMATION);
-        alerta.setTitle("ERROR");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Campo vazio");
-        alerta.showAndWait();
+            Alert alerta = new Alert(AlertType.INFORMATION);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Campo vazio");
+            alerta.showAndWait();
         }
         else if(daoUsuario.buscarPorChave("login", campoLogin.getText()) != null){
                 
-        Alert alerta = new Alert(AlertType.INFORMATION);
-        alerta.setTitle("ERROR");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Login ja cadastrado");
-        alerta.showAndWait();
+            Alert alerta = new Alert(AlertType.INFORMATION);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Login ja cadastrado");
+            alerta.showAndWait();
         }
         else{
-        usuario = new Usuario();
-        usuario.setLogin(campoLogin.getText());
-        usuario.setNome(campoNome.getText());
-        usuario.setSenha(campoSenha.getText());
-        daoUsuario.inserir(usuario);
-        
-        Alert alerta = new Alert(AlertType.INFORMATION);
-        alerta.setHeaderText(null);
-        alerta.setContentText("Usuario cadastrado");
-        alerta.showAndWait(); 
+            usuario = new Usuario();
+            usuario.setLogin(campoLogin.getText());
+            usuario.setNome(campoNome.getText());
+            usuario.setSenha(campoSenha.getText());
+            daoUsuario.inserir(usuario);
 
+            Alert alerta = new Alert(AlertType.INFORMATION);
+            alerta.setHeaderText(null);
+            alerta.setContentText("Usuario cadastrado");
+            alerta.showAndWait(); 
+            App.setRoot("telaMenu");
         }
         
     }

@@ -53,11 +53,11 @@ public class ProducaoControle {
         
         if(comboVaca == null || datas == null || leiteF.isEmpty()){
             
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("ERROR");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Campo vazio");
-        alerta.showAndWait();
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Campo vazio");
+            alerta.showAndWait();
         
         }
         else{

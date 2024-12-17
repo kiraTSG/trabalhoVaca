@@ -8,13 +8,22 @@ public class MenuControle {
     @FXML
     public void VacaInserir () throws IOException{
         App.setRoot ("telaVaca");
+    }        
+    public void VacaAlterar () throws IOException{
+        App.setRoot ("telaAlterarVaca");
+    }    
+    public void VacaExcluir () throws IOException{
+        App.setRoot ("telaExcluirVaca");
     }    
     public void UsuarioLogar () throws IOException{
         App.setRoot ("telaLogin");
     }
     public void UsuarioCadastrar () throws IOException{
         App.setRoot ("telaCadastroUsuario");
-    }    
+    }   
+    public void UsuarioAlterar () throws IOException{
+        App.setRoot ("telaAlterarUsuario");
+    }   
     public void UsuarioExcluir () throws IOException{
         App.setRoot ("telaExcluirUsuario");
     }    
@@ -30,5 +39,8 @@ public class MenuControle {
     public void ProducaoListarDia () throws IOException{
         App.setRoot ("telaListarProducaoDia");
     }
+    public void Sair () throws IOException{
+        App.setRoot ("telaLogin");
+    }   
 
 }

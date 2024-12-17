@@ -24,6 +24,7 @@ public class ListarVaca {
     
     Dao <VacaProducao> daoProducao;
     Dao <Vaca> daoVaca;
+    
     @FXML
     private void initialize(){
         daoProducao = new Dao(VacaProducao.class);
@@ -38,6 +39,7 @@ public class ListarVaca {
         tabelaProducao.getColumns().addAll(colunaData, colunaQuantidade);
         
     }
+    
     @FXML
     private void atualizarCampos(){
         selecionada = comboVacas.getValue();
@@ -51,6 +53,7 @@ public class ListarVaca {
         tabelaProducao.setItems(listaFiltrada);
         
     }
+    
     @FXML
     public void voltar() throws IOException{
         App.setRoot("telaMenu");

@@ -1,4 +1,3 @@
-
 package com;
 
 import com.App;
@@ -19,7 +18,6 @@ public class LoginControle {
     
     Dao<Usuario> daoUsuario;
     
-    
     @FXML
     private void initialize(){
         daoUsuario = new Dao(Usuario.class); 
@@ -29,28 +27,28 @@ public class LoginControle {
     private void entrar()throws IOException{
         if(campoLogin.getText().isEmpty()|| campoSenha.getText().isEmpty()){
             
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("ERROR");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Campo vazio");
-        alerta.showAndWait();
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Campo vazio");
+            alerta.showAndWait();
         }
         
         else if(daoUsuario.buscarPorChave("login", campoLogin.getText()) == null || daoUsuario.buscarPorChave("senha", campoSenha.getText()) == null ){
                 
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("ERROR");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Login nao encontrado");
-        alerta.showAndWait();
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Login nao encontrado");
+            alerta.showAndWait();
         }
         else{
         
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setHeaderText(null);
-        alerta.setContentText("Login aceito");
-        alerta.showAndWait();
-        App.setRoot ("telaMenu");
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setHeaderText(null);
+            alerta.setContentText("Login aceito");
+            alerta.showAndWait();
+            App.setRoot ("telaMenu");
         }
     }
     
@@ -59,8 +57,4 @@ public class LoginControle {
         App.setRoot("telaCadastroUsuario");
     }
     
-    @FXML
-    public void cancelar() throws IOException{
-        App.setRoot("telaMenu");
-    }
 }

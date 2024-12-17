@@ -28,34 +28,35 @@ public class VacaControle {
     
     @FXML
     public void cadastrar(){
-                if(campoBrinco.getText().isEmpty()|| campoNome.getText().isEmpty()|| campoRaca.getText().isEmpty()){
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("ERROR");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Campo vazio");
-        alerta.showAndWait();
+        if(campoBrinco.getText().isEmpty()|| campoNome.getText().isEmpty()|| campoRaca.getText().isEmpty()){
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Campo vazio");
+            alerta.showAndWait();
         }
         else if(daoVaca.buscarPorChave("brinco", campoBrinco.getText()) != null){
                 
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("ERROR");
-        alerta.setHeaderText(null);
-        alerta.setContentText("Vaca ja inserido");
-        alerta.showAndWait();
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Vaca ja inserido");
+            alerta.showAndWait();
         }
         else{
-        vaca = new Vaca();
-        vaca.setBrinco(campoBrinco.getText());
-        vaca.setNome(campoNome.getText());
-        vaca.setRaca(campoRaca.getText());
-        daoVaca.inserir(vaca);
-        
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setHeaderText(null);
-        alerta.setContentText("Vaca inserido");
-        alerta.showAndWait(); 
+            vaca = new Vaca();
+            vaca.setBrinco(campoBrinco.getText());
+            vaca.setNome(campoNome.getText());
+            vaca.setRaca(campoRaca.getText());
+            daoVaca.inserir(vaca);
+
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setHeaderText(null);
+            alerta.setContentText("Vaca inserido");
+            alerta.showAndWait(); 
         }
     }
+    
     @FXML
     public void cancelar() throws IOException{
         App.setRoot("telaMenu");

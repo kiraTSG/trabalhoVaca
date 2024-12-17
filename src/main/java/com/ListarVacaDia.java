@@ -29,6 +29,7 @@ public class ListarVacaDia {
     
     Dao <VacaProducao> daoProducao;
     Dao <Vaca> daoVaca;
+    
     @FXML
     private void initialize(){
         daoProducao = new Dao(VacaProducao.class);

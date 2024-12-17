@@ -50,7 +50,7 @@ public class Vaca  {
     
     @Override
     public String toString(){
-    return brinco;
-}
+        return brinco;
+    }
         
 }

@@ -26,12 +26,7 @@
       </Text>
       <TextField fx:id="campoLogin" layoutX="220.0" layoutY="157.0" prefHeight="25.0" prefWidth="200.0" />
       <TextField fx:id="campoSenha" layoutX="220.0" layoutY="237.0" prefWidth="200.0" />
-      <Button layoutX="182.0" layoutY="414.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="390.0" layoutY="414.0" mnemonicParsing="false" onAction="#entrar" text="Entrar">
+      <Button layoutX="475.0" layoutY="234.0" mnemonicParsing="false" onAction="#entrar" text="Entrar">
          <font>
             <Font size="15.0" />
          </font>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ExcluirVaca">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ExcluirVaca">
    <children>
       <Text layoutX="259.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Excluir Vaca">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <TextField fx:id="campoBrinco" layoutX="220.0" layoutY="169.0" prefHeight="25.0" prefWidth="200.0" promptText="Brinco" />
       <Text layoutX="79.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brinco">
          <font>
             <Font size="22.0" />
@@ -29,5 +29,12 @@
             <Font size="15.0" />
          </font>
       </Button>
+      <ComboBox fx:id="comboVaca" layoutX="221.0" layoutY="169.0" onAction="#atualizarCampos" prefWidth="150.0" promptText="Brinco" />
+      <TextField fx:id="campoNome" layoutX="222.0" layoutY="225.0" promptText="Nome" />
+      <Text layoutX="79.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
