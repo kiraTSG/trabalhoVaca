@@ -47,7 +47,7 @@ public class ListarVacaMes {
         List <VacaProducao> listaProd = daoProducao.listarTodos();
         ObservableList <VacaProducao> listaFiltrada  = FXCollections.observableArrayList();
         for(VacaProducao v : listaProd){
-            if(v.getData().getMonthValue() == selecionada ){
+            if(v.getData().getMonthValue() == selecionada){
                 listaFiltrada.add(v);
             }
         }

@@ -1,11 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -41,22 +39,21 @@ public class ListarVacaDia {
         colunaData.setCellValueFactory (new PropertyValueFactory <> ("data"));
         TableColumn <VacaProducao, Integer> colunaQuantidade = new TableColumn <> ("Quantidade");
         colunaQuantidade.setCellValueFactory (new PropertyValueFactory<>("leite"));
-        tabelaProducao.getColumns().addAll(colunaBrinco, colunaData, colunaQuantidade);
-        atualizarCampos();
-        
+        tabelaProducao.getColumns().addAll(colunaBrinco, colunaData, colunaQuantidade);  
     }
+    
     @FXML
     private void atualizarCampos(){
-//        selecionada =  Integer.parseInt(dia.getText());
+        selecionada =  Integer.parseInt(dia.getText());
+        LocalDate dataAtual = LocalDate.now();
         List <VacaProducao> listaProd = daoProducao.listarTodos();
         ObservableList <VacaProducao> listaFiltrada  = FXCollections.observableArrayList();
         for(VacaProducao v : listaProd){
-            if(v.getData().equals(v.getDataAtual())){
+            if(v.getData().getDayOfMonth() == selecionada && dataAtual.getMonth().equals(v.getData().getMonth()) && dataAtual.getYear() == v.getData().getYear()){
                 listaFiltrada.add(v);
             }
         }
         tabelaProducao.setItems(listaFiltrada);
-        
     }
     
     @FXML

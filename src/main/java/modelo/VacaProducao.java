@@ -12,6 +12,9 @@ public class VacaProducao {
     @BsonProperty(value="data")
     private LocalDate data;
     
+    @BsonProperty(value="data")
+    private LocalDate datas;
+    
     @BsonProperty(value="leite")
     private String leite; 
 
@@ -38,13 +41,12 @@ public class VacaProducao {
     public LocalDate getData() {
         return data;
     }
-    public LocalDate getDataAtual() {
-        return data = LocalDate.now();
-    }
+    
     public void setData(LocalDate data) {
         this.data = data;
     }
 
+        
     public String getLeite() {
         return leite;
     }
